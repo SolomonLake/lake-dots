@@ -1,8 +1,10 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import { useTypedSelector } from "./redux/reducers/rootReducer";
 
 function App() {
+  const players = useTypedSelector((state) => state.players);
   return (
     <div className="App">
       <header className="App-header">
