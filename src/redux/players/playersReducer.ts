@@ -1,7 +1,8 @@
 import { ReducerAction } from "react";
 import { PlayersActionTypes } from "./playersActionTypes";
+import { PlayerMap } from "./playerTypes";
 
-const initialState = {};
+const initialState: PlayerMap = {};
 
 export function playersReducer(
   state = initialState,
@@ -11,6 +12,7 @@ export function playersReducer(
     case "ADD_PLAYER": {
       return {
         ...state,
+        [action.player.id]: action.player,
       };
     }
     default:
