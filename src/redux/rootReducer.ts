@@ -1,6 +1,6 @@
 import { TypedUseSelectorHook, useSelector } from "react-redux";
 import { combineReducers } from "redux";
-import { playersReducer } from "../players/playersReducer";
+import { playersReducer } from "./players/playersReducer";
 
 export const rootReducer = combineReducers({ players: playersReducer });
 
